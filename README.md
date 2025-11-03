@@ -10,4 +10,5 @@ Its a hospital data set. There are total 4 tables.
 
 #### Challenges Lists
 First create data base and table structure using the [Code](./Create%20Database,%20Table%20Structures)
+
 <br>Day1 : List all unique hospital services available in the hospital.[Code](./Day%201_IDC.sql)
