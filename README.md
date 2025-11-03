@@ -9,4 +9,5 @@ Its a hospital data set. There are total 4 tables.
 <br> 4. hospital_staff_schedule.csv – Weekly schedule
 
 #### Challenges Lists
-Day1 : List all unique hospital services available in the hospital.[View data file](./Day%201_IDC.sql)
+First create data base and table structure using the [Code](./Create%20Database,%20Table%20Structures)
+Day1 : List all unique hospital services available in the hospital.[Code](./Day%201_IDC.sql)
