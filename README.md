@@ -9,7 +9,7 @@
 
 ### 21-day Challenge for SQL by IDC [Indian Data Club] sponsored by DPDzero
 In this Repo, I have uploaded day-wise challenges and the solution using my approach.<br> The main aim is to improve SQL knowledge by doing problems, improving our approach and improving logic building
-#### About the dataset:
+#### About the dataset: [Link](./sources)
 It's a hospital data set. There are a total of 4 tables.
 <br> 1. hospital_staff.csv – List of hospital staff
 <br> 2. hospital_patients.csv – Patient records
