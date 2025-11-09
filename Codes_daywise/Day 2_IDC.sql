@@ -36,4 +36,4 @@ SELECT
 DISTINCT `week` -- I use distinct function so that if any week repeat then it will come once
 FROM 
 services_weekly
-WHERE patients_request >100;
+WHERE `patients_request` >100;
