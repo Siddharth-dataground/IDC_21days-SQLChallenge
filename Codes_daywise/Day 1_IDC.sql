@@ -4,7 +4,7 @@ USE hospital;
 -- Question: List all unique hospital services available in the hospital.
 
 SELECT
-DISTINCT UPPER(service) AS 'Distinct Services In Hospital'
+DISTINCT UPPER(`service`) AS 'Distinct Services In Hospital'
 FROM
 services_weekly;
 
