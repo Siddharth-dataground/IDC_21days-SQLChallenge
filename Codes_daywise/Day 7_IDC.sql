@@ -44,4 +44,4 @@ SUM(`present`) AS 'presence'
 FROM
 staff_schedule
 GROUP BY `week`
-HAVING presence < 50;
+HAVING `presence` < 50;
