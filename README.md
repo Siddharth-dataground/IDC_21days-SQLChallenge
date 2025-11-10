@@ -20,10 +20,14 @@ It's a hospital data set. There are a total of 4 tables.
 #### Challenges List
 First, create data base and table structure using the [Code](./Create%20Database,%20Table%20Structures)
 
-- **Day 1** : List all unique hospital services available in the hospital.[Code](./Codes_daywise/Day%201_IDC.sql)
-- **Day 2** : Find all patients admitted to the 'Surgery' service with a satisfaction score below 70, showing their patient_id, name, age, and satisfaction score.[Code](./Codes_daywise/Day%202_IDC.sql)
-- **Day 3** : Retrieve the top 5 weeks with the highest patient refusals across all services, showing week, service, patients_refused, and patients_request. Sort by patients_refused in descending order.[Code](./Codes_daywise/Day%203_IDC.sql)
-- **Day 4** : Find the 3rd to 7th highest patient satisfaction scores from the patients table, showing patient_id, name, service, and satisfaction. Display only these 5 records.[Code](./Codes_daywise/Day%204_IDC.sql)
-- **Day 5** : Calculate the total number of patients admitted, total patients refused, and the average patient satisfaction across all services and weeks.Round the average satisfaction to 2 decimal places.[Code](./Codes_daywise/Day%205_IDC.sql)
-- **Day 6** : For each hospital service, calculate the total number of patients admitted, total patients refused, and the admission rate ( percentage of requests that were admitted ). Order by admission rate descending.[Code](./Codes_daywise/Day%206_IDC.sql)
-- **Day 7** : Identify services that refused more than 100 patients in total and had an average patient satisfaction below 80. Show service name, total refused, and average satisfaction.[Code](./Codes_daywise/Day%207_IDC.sql)
+| Days | Challenege | Link |
+|-|-|-|
+| **1** | List all unique hospital services available in the hospital. | [Code](./Codes_daywise/Day%201_IDC.sql)|
+| **2** | Find all patients admitted to the 'Surgery' service with a satisfaction score below 70, showing their patient_id, name, age, and satisfaction score.|[Code](./Codes_daywise/Day%202_IDC.sql)
+| **3** | Retrieve the top 5 weeks with the highest patient refusals across all services, showing week, service, patients_refused, and patients_request. Sort by patients_refused in descending order.|[Code](./Codes_daywise/Day%203_IDC.sql)
+| **4** | Find the 3rd to 7th highest patient satisfaction scores from the patients table, showing patient_id, name, service, and satisfaction. Display only these 5 records.|[Code](./Codes_daywise/Day%204_IDC.sql)
+| **5** | Calculate the total number of patients admitted, total patients refused, and the average patient satisfaction across all services and weeks.Round the average satisfaction to 2 decimal places.|[Code](./Codes_daywise/Day%205_IDC.sql)
+| **6** | For each hospital service, calculate the total number of patients admitted, total patients refused, and the admission rate ( percentage of requests that were admitted ). Order by admission rate descending.|[Code](./Codes_daywise/Day%206_IDC.sql)
+| **7** | Identify services that refused more than 100 patients in total and had an average patient satisfaction below 80. Show service name, total refused, and average satisfaction.|[Code](./Codes_daywise/Day%207_IDC.sql)
+
+
