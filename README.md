@@ -20,7 +20,7 @@ It's a hospital data set. There are a total of 4 tables.
 #### Challenges List
 First, create a database and table structure using the [Code](./Create%20Database,%20Table%20Structures)
 
-| Days | Challenege | Link |
+| Days | Challenege | Code Link |
 |-|-|-|
 | **1** | List all unique hospital services available in the hospital. | [Code](./Codes_daywise/Day%201_IDC.sql)|
 | **2** | Find all patients admitted to the 'Surgery' service with a satisfaction score below 70, showing their patient_id, name, age, and satisfaction score.|[Code](./Codes_daywise/Day%202_IDC.sql) |
@@ -29,6 +29,7 @@ First, create a database and table structure using the [Code](./Create%20Databas
 | **5** | Calculate the total number of patients admitted, total patients refused, and the average patient satisfaction across all services and weeks.Round the average satisfaction to 2 decimal places.|[Code](./Codes_daywise/Day%205_IDC.sql) |
 | **6** | For each hospital service, calculate the total number of patients admitted, total patients refused, and the admission rate ( percentage of requests that were admitted ). Order by admission rate descending.|[Code](./Codes_daywise/Day%206_IDC.sql) |
 | **7** | Identify services that refused more than 100 patients in total and had an average patient satisfaction below 80. Show service name, total refused, and average satisfaction.|[Code](./Codes_daywise/Day%207_IDC.sql) |
-| **8** | Create a patient summary that shows patient_id, full name in uppercase, service in lowercase, age category (if age >= 65 then 'Senior', if age >= 18 then 'Adult', else 'Minor'), and name length. Only show patients whose name length is greater than 10 characters.|[Code](./Codes_daywise/Day%208_IDC.sql)
+| **8** | Create a patient summary that shows patient_id, full name in uppercase, service in lowercase, age category (if age >= 65 then 'Senior', if age >= 18 then 'Adult', else 'Minor'), and name length. Only show patients whose name length is greater than 10 characters.|[Code](./Codes_daywise/Day%208_IDC.sql)|
+| **9** | Calculate the average length of stay (in days) for each service, showing only services where the average stay is more than 7 days. Also show the count of patients and order by average stay descending.|[Code](./Codes_daywise/Day%209_IDC.sql)|
 
 
