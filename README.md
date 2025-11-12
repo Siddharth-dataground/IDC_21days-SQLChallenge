@@ -31,5 +31,6 @@ First, create a database and table structure using the [Code](./Create%20Databas
 | **7** | Identify services that refused more than 100 patients in total and had an average patient satisfaction below 80. Show service name, total refused, and average satisfaction.|[Code](./Codes_daywise/Day%207_IDC.sql) |
 | **8** | Create a patient summary that shows patient_id, full name in uppercase, service in lowercase, age category (if age >= 65 then 'Senior', if age >= 18 then 'Adult', else 'Minor'), and name length. Only show patients whose name length is greater than 10 characters.|[Code](./Codes_daywise/Day%208_IDC.sql)|
 | **9** | Calculate the average length of stay (in days) for each service, showing only services where the average stay is more than 7 days. Also show the count of patients and order by average stay descending.|[Code](./Codes_daywise/Day%209_IDC.sql)|
+| **10** | Create a service performance report showing service name, total patients admitted, and a performance category based on the following: 'Excellent' if avg satisfaction >= 85, 'Good' if >= 75, 'Fair' if >= 65, otherwise 'Needs Improvement'. Order by average satisfaction descending.|[Code](./Codes_daywise/Day%2010_IDC.sql)|
 
 
