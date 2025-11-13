@@ -9,17 +9,17 @@ USE hospital;
 
 SELECT
 `service`,
-COUNT(`patient_id`) AS 'Total patients admitted',
-ROUND(AVG(`satisfaction`),2) AS 'Average satisfaction',
+SUM(`patients_admitted`) AS 'Total patients admitted',
+ROUND(AVG(`patient_satisfaction`),2) AS 'Average satisfaction',
 CASE
-WHEN AVG(`satisfaction`) >=85 THEN 'Excellent'
-WHEN AVG(`satisfaction`) >=75 AND  AVG(`satisfaction`) <85 THEN 'Good'
-WHEN AVG(`satisfaction`) >=65 AND  AVG(`satisfaction`) <75 THEN 'Fair'
+WHEN AVG(`patient_satisfaction`) >=85 THEN 'Excellent'
+WHEN AVG(`patient_satisfaction`) >=75 AND  AVG(`patient_satisfaction`) <85 THEN 'Good'
+WHEN AVG(`patient_satisfaction`) >=65 AND  AVG(`patient_satisfaction`) <75 THEN 'Fair'
 ELSE
 'Needs Improvement'
 END AS 'Performance category'
 FROM
-patients
+services_weekly
 GROUP BY `service`
 ORDER BY `Average satisfaction` DESC;
 
@@ -62,3 +62,6 @@ ELSE 'Child'
 END AS 'age group'
 FROM
 patients;
+
+
+SELECT * FROM services_weekly;
