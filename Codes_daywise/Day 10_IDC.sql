@@ -63,5 +63,3 @@ END AS 'age group'
 FROM
 patients;
 
-
-SELECT * FROM services_weekly;
