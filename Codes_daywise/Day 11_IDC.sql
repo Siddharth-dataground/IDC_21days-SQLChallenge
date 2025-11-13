@@ -1,4 +1,4 @@
--- Day 10 - IDC 21days Challenge
+-- Day 11 - IDC 21days Challenge
 
 /*
 Find all unique combinations of service and event type from the services_weekly table where events are not null or none, 
