@@ -7,12 +7,12 @@ along with the count of occurrences for each combination. Order by count descend
 USE hospital;
 
 SELECT
-`service`,`event`,COUNT(*) AS 'Occurance'
+DISTINCT `service`,`event`,COUNT(*) AS 'Occurence'
 FROM
 services_weekly
 WHERE `event`<>'none'
 GROUP BY `service`,`event`
-ORDER BY `Occurance` DESC;
+ORDER BY `Occurence` DESC;
 
 -- ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------------------------------------------------------------------------------------------
