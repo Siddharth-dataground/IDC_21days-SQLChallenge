@@ -36,5 +36,7 @@ First, create a database and table structure using the [Code](./Create%20Databas
 | **12** | Analyse the event impact by comparing weeks with events vs weeks without events. Show: event status ('With Event' or 'No Event'), count of weeks, average patient satisfaction, and average staff morale. Order by average patient satisfaction descending.|[Code](./Codes_daywise/Day%2012_IDC.sql)|
 | **13** | Create a comprehensive report showing patient_id, patient name, age, service, and the total number of staff members available in their service. Only include patients from services that have more than 5 staff members. Order by number of staff descending, then by patient name.|[Code](./Codes_daywise/Day%2013_IDC.sql)|
 | **14** | Create a staff utilisation report showing all staff members (staff_id, staff_name, role, service) and the count of weeks they were present (from staff_schedule). Include staff members even if they have no schedule records.Order by weeks present descending.|[Code](./Codes_daywise/Day%2014_IDC.sql)|
+| **15** | Create a comprehensive service analysis report for week 20 showing: service name, total patients admitted that week, total patients refused, average patient satisfaction, count of staff assigned to service, and count of staff present that week. Order by patients admitted descending.|[Code](./Codes_daywise/Day%2015_IDC.sql)|
+
 
 
