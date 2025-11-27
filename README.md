@@ -18,7 +18,7 @@ It's a hospital data set. There are a total of 4 tables.
 <br> 4. hospital_staff_schedule.csv – Weekly schedule
 
 #### Challenges List
-First, create a database and table structure using the [Code](./Create%20Database,%20Table%20Structures)
+First, create a database and table structure using the [Code](./Create%20Database,%20Table%20Structures.sql)
 
 | Days | Challenege | Code Link |
 |-|-|-|
