@@ -21,7 +21,7 @@ There are 4 files which we are going to use
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ## Database creation and table Loading
-Create a database and tables by running the attached code in your MySQL Workbench.[Link]()
+Create a database and tables by running the attached code in your MySQL Workbench.[Link](./Mini%20Project_table%20creation.sql)</br>
 Once the above step is complete, load the above data using the **Table Import Wizard**.
 
 But order_details.csv may not load because it's a large file. Load it using the syntax below:
