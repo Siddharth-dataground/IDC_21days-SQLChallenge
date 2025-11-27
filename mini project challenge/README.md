@@ -11,14 +11,32 @@ Our goal is to answer a series of questions **using SQL**
 - Aggregations (`SUM`, `AVG`, `COUNT`, `MIN`, `MAX`, `GROUP BY`, `HAVING`)
 - Joins (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL OUTER JOIN`, `SELF JOIN`)
 - Data cleaning (`DISTINCT`, `COALESCE`, handling NULLs)
---------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 ## Source Information
-There are 4 files
-1. pizzas.csv
-2. pizza_types_fixed.csv
-3. orders.csv[link]<./'orders.csv'>
+There are 4 files which we are going to use
+1. pizzas.csv[link](./pizzas.csv)
+2. pizza_types_fixed.csv[link](./pizza_types_fixed.csv)
+3. orders.csv[link](./orders.csv)
+4. order_details.csv[link](./order_details.csv)
 
---------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+## Database creation and table Loading
+Create a database and tables by running the attached code in your MySQL Workbench.[Link]()
+Once the above step is complete, load the above data using the **Table Import Wizard**.
+
+But order_details.csv may not load because it's a large file. Load it using the syntax below:
+
+SET GLOBAL local_infile = 1;</br>
+
+LOAD DATA LOCAL INFILE '[Filepath>]'</br>
+INTO TABLE [table_name]</br>
+CHARACTER SET utf8mb4</br>
+FIELDS TERMINATED BY ','</br>
+OPTIONALLY ENCLOSED BY '"'</br>
+LINES TERMINATED BY '\n'</br>
+IGNORE 1 LINES;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Questions
 
