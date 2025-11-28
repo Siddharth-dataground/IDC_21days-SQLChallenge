@@ -26,15 +26,19 @@ Once the above step is complete, load the above data using the **Table Import Wi
 
 But order_details.csv may not load because it's a large file. Load it using the syntax below:
 
-SET GLOBAL local_infile = 1;</br>
+**Syntax**:
+```sql
+-- This syntax will help to load data into the database mentioned table from the local system.
+SET GLOBAL local_infile = 1;
 
-LOAD DATA LOCAL INFILE '[**_Filepath_**]'</br>
-INTO TABLE [**_table_name_**]</br>
-CHARACTER SET utf8mb4</br>
-FIELDS TERMINATED BY ','</br>
-OPTIONALLY ENCLOSED BY '"'</br>
-LINES TERMINATED BY '\n'</br>
+LOAD DATA LOCAL INFILE '<Filepath>'
+INTO TABLE <table_name>
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
+```
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
