@@ -44,6 +44,8 @@ IGNORE 1 LINES;
 
 ## Questions
 
+**Answers for all problems below** : [Link](./Mini%20Project.sql)
+
 **Phase 1: Foundation & Inspection**
 
 1. List all unique pizza categories (`DISTINCT`).
