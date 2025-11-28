@@ -1,59 +1,8 @@
-CREATE DATABASE IDC_Pizza;
+-- Use the database IDC_Pizza
 USE IDC_Pizza;
 
--- 1. Create the pizza_types table (No Foreign Keys)
-CREATE TABLE pizza_types (
-    pizza_type_id VARCHAR(50) PRIMARY KEY, -- e.g., 'bbq_ckn'
-    name VARCHAR(100),                      -- e.g., 'The Barbecue Chicken Pizza'
-    category VARCHAR(50),                   -- e.g., 'Chicken'
-    ingredients TEXT                        -- e.g., 'Barbecued Chicken, Red Peppers, ...'
-);
 
--- 2. Create the pizzas table (FK to pizza_types)
-CREATE TABLE pizzas (
-    pizza_id VARCHAR(50) PRIMARY KEY,   -- e.g., 'bbq_ckn_s'
-    pizza_type_id VARCHAR(50) REFERENCES pizza_types(pizza_type_id),
-    size VARCHAR(10),                   -- e.g., 'S', 'M', 'L'
-    price NUMERIC(5, 2)                 -- e.g., 12.75
-);
-
--- 3. Create the orders table (No Foreign Keys)
-
-CREATE TABLE orders (
-    order_id INT PRIMARY KEY,
-    date DATE,
-    time TIME
-);
-
--- 4. Create the order_details table (FK to orders and pizzas)
-CREATE TABLE order_details (
-    order_details_id INT PRIMARY KEY,
-    order_id INT REFERENCES orders(order_id),
-    pizza_id VARCHAR(50) REFERENCES pizzas(pizza_id),
-    quantity INT
-);
-
-
-SHOW TABLES;
-
-
--- To load the data details faster this way for order_details
-
-SET GLOBAL local_infile = 1;
-
-LOAD DATA LOCAL INFILE '/Users/siddharthshreekumar/Downloads/order_details.csv'
-INTO TABLE order_details
-CHARACTER SET utf8mb4
-FIELDS TERMINATED BY ','
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
--- Rest CSV files loaded using table import wizard
--- --------------------------------------------------------------------------------------------------------------
--- --------------------------------------------------------------------------------------------------------------
-
--- Lets check all tables and column types.
+-- Let's check all tables and column types.
 SELECT * FROM order_details;
 DESC order_details;
 
@@ -159,7 +108,7 @@ WHERE `date` = '2015-02-12' OR `time` >'8:00:00';
 -- Total quantity of pizzas sold (SUM).
 
 SELECT 
-SUM(`quantity`) AS 'Total Quantty' 
+SUM(`quantity`) AS 'Total Quantity' 
 FROM order_details;
 
 -- Average pizza price (AVG).
@@ -169,7 +118,7 @@ ROUND(AVG(`price`),2) AS 'avg_pizza_price'
 FROM pizzas;
 
 -- Total order value per order (`JOIN`, `SUM`, `GROUP BY`).
--- per order we want to know how much quantity, and price
+-- per order, we want to know the quantity and price
 
 SELECT
 o.`order_id`,
@@ -183,11 +132,11 @@ GROUP BY order_id
 ORDER BY order_id;
 
 -- Total quantity sold per pizza category (JOIN, GROUP BY)
--- WE CAN do the below by multiple join at once but that will increase time
+-- WE CAN do the below by multiple joins at once, but that will increase the time
 
 WITH t1 AS
 ( -- This CTE will pizza_type_id wise quantity
--- I did this CTE to reduce row before joining, so that it can be faster.
+-- I did this CTE to reduce rows before joining, so that it can be faster.
 SELECT
 `pizza_type_id`, SUM(`quantity`) AS 't_quantity'
 FROM
@@ -252,7 +201,7 @@ WHERE p1.`size` != p2.`size` AND p1.`size` = 's'
 ORDER BY p1.pizza_type_id, p1.size;
 
 
--- Day wise  total quantity pizza sold,total orders placed
+-- Day-wise  total quantity of pizza sold, total orders placed
 
 SELECT 
 o.`date`, SUM(od.`quantity`)  AS 'Total_quantity', COUNT(DISTINCT o.`order_id`) AS 'Total Orders'
@@ -265,7 +214,7 @@ GROUP BY o.`date`
 ORDER BY `date` ASC;
 
 
--- Which Price range have more quantity of pizza ordered
+-- Which Price range has the more quantity of pizza ordered
 
 SELECT 
 DISTINCT p.`price`, SUM(od.`quantity`) AS 'Total no. of Pizza'
@@ -277,11 +226,11 @@ GROUP BY `price`
 ORDER BY `Total no. of Pizza` DESC;
 
 
--- Month on month total sales
+-- Month-on-month total sales
 
 WITH temp AS 
-( -- order_id wise total sales.
--- This CTE I made to minimize the rows so that join will faster further 
+( -- order_id-wise total sales.
+-- This CTE I made to minimise the rows so that the join will be faster further 
 SELECT
 od.`order_id`, SUM(od.`quantity`*p.`price`) AS 'Total Sales'
 FROM
