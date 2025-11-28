@@ -8,7 +8,7 @@ Order by total patients admitted descending.
 */
 
 SELECT
-`service`, `total patients admitted`, `Differe b/w total and avg`,
+`service`, `total patients admitted`, `Diff b/w total and avg`,
 CASE
 WHEN `total patients admitted`>`Overall_avg_patients_admitted` THEN 'Above Average'
 WHEN `total patients admitted`=`Overall_avg_patients_admitted` THEN 'Average'
@@ -19,7 +19,7 @@ FROM
 SELECT `service`,
 SUM(`patients_admitted`) AS 'total patients admitted',
 ( SELECT SUM(`patients_admitted`)/COUNT(DISTINCT `service`) FROM services_weekly ) AS 'Overall_avg_patients_admitted' ,
-( SUM(`patients_admitted`) - (SELECT SUM(`patients_admitted`)/COUNT(DISTINCT `service`) FROM services_weekly) ) AS 'Differe b/w total and avg'
+( SUM(`patients_admitted`) - (SELECT SUM(`patients_admitted`)/COUNT(DISTINCT `service`) FROM services_weekly) ) AS 'Diff b/w total and avg'
 FROM services_weekly
 GROUP BY `service`
 ) AS t
