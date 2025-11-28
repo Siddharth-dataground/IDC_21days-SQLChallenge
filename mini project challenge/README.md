@@ -28,8 +28,8 @@ But order_details.csv may not load because it's a large file. Load it using the 
 
 SET GLOBAL local_infile = 1;</br>
 
-LOAD DATA LOCAL INFILE '[Filepath>]'</br>
-INTO TABLE [table_name]</br>
+LOAD DATA LOCAL INFILE '[**_Filepath_**]'</br>
+INTO TABLE [**_table_name_**]</br>
 CHARACTER SET utf8mb4</br>
 FIELDS TERMINATED BY ','</br>
 OPTIONALLY ENCLOSED BY '"'</br>
