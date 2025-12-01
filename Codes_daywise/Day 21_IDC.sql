@@ -13,7 +13,8 @@ Order by performance score descending.
 WITH temp1 AS
 (-- This CTE will give service, Total admission, total refusal, avg satisfaction
 SELECT 
-`service`,SUM(`patients_admitted`) AS 'Total admission',SUM(`patients_refused`) AS 'Total Refusal', AVG(`patient_satisfaction`) AS 'AVG satisfaction'
+`service`,SUM(`patients_admitted`) AS 'Total admission',SUM(`patients_refused`) AS 'Total Refusal', 
+AVG(`patient_satisfaction`) AS 'AVG satisfaction'
 FROM services_weekly
 GROUP BY `service`), temp2 AS 
 ( -- This CTE will return Total staff, avg week present per services
