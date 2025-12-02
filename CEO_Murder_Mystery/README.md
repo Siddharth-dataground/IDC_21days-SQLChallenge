@@ -12,7 +12,7 @@ My mission is simple but challenging:
 
 👉 **Find out who the killer is, where and when the crime took place, and how it happened — using only SQL queries.**
 ---
-### Links to data source and query : [Link]('/CEO_murder_case.sql')
+### Links to data source and query : [Link](./CEO_murder_case.sql)
 
 ---
 ## All Table details
